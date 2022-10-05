@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3DAC746D-F6EC-4079-BDFD-26947003883C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheNoobs.ValueObject.Abstractions", "src\TheNoobs.ValueObject.Abstractions\TheNoobs.ValueObject.Abstractions.csproj", "{956A7319-7867-45E2-ADCA-74E4337DE469}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{45A4A648-0289-48CE-868B-640F627919CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheNoobs.ValueObject.Abstractions.UnitTests", "tests\TheNoobs.ValueObject.Abstractions.UnitTests\TheNoobs.ValueObject.Abstractions.UnitTests.csproj", "{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1AFA010D-C461-4347-A9CB-3155A486589F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		coverlet.runsettings = coverlet.runsettings
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".devops", ".devops", "{7035911C-28A9-416B-B358-8AB28D20666B}"
+	ProjectSection(SolutionItems) = preProject
+		.devops\azuredevops.yml = .devops\azuredevops.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{A24BA6BA-B250-48E8-BC17-4A1F322C7461}"
+	ProjectSection(SolutionItems) = preProject
+		images\icon.png = images\icon.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{956A7319-7867-45E2-ADCA-74E4337DE469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956A7319-7867-45E2-ADCA-74E4337DE469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956A7319-7867-45E2-ADCA-74E4337DE469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956A7319-7867-45E2-ADCA-74E4337DE469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{956A7319-7867-45E2-ADCA-74E4337DE469} = {3DAC746D-F6EC-4079-BDFD-26947003883C}
+		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6} = {45A4A648-0289-48CE-868B-640F627919CB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6943B030-537F-446B-A82B-F15DAC1B2927}
+	EndGlobalSection
+EndGlobal
