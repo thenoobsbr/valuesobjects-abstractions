@@ -23,6 +23,7 @@
         <Description>Some useful ValueObjects' abstractions.</Description>
         <RepositoryType>GIT</RepositoryType>
         <PackageId>TheNoobs.ValueObject.Abstractions</PackageId>
+        <PackageTags>ValueObjects;vo;</PackageTags>
         <UserSecretsId>4178b2e2-834b-4c31-bce4-a9ad706266c5</UserSecretsId>
         <Version>1.0.0</Version>
         <PackageProjectUrl>https://github.com/thenoobsbr/valuesobjects-abstractions.git</PackageProjectUrl>
