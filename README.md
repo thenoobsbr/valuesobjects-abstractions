@@ -17,4 +17,4 @@ public class AgeStub : ValueObject<int>
 
 
 ---
-<3 Made with love!
+:green_heart: Made with love!
