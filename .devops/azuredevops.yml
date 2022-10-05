@@ -1,0 +1,49 @@
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    condition: |
+      succeeded()
+    variables:
+      buildNumber: $(Build.BuildNumber)
+      version: $(Build.SourceBranch)
+    steps:
+    - checkout: self
+      path: 'project'
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore'
+      inputs:
+        command: 'restore'
+        projects: '$(Build.SourcesDirectory)/**/*.sln'
+    - task: DotNetCoreCLI@2
+      displayName: 'Build'
+      inputs:
+        command: 'build'
+        projects: '$(Build.SourcesDirectory)/**/*.sln'
+        arguments: '--no-restore --configuration Release'
+    - task: DotNetCoreCLI@2
+      displayName: 'Install ReportGenerator Tool'
+      inputs:
+        command: custom
+        custom: tool
+        arguments: update dotnet-reportgenerator-globaltool --tool-path tools --ignore-failed-sources
+    - task: DotNetCoreCLI@2  
+      displayName: 'dotnet test'  
+      inputs:  
+        command: test  
+        projects: '$(Build.SourcesDirectory)/**/test/**/*.UnitTests.csproj'
+        arguments: --collect:"XPlat Code Coverage" --logger:trx
+        testRunTitle: 'UnitTests'
+    - script: |
+        ./tools/reportgenerator "-reports:$(Build.SourcesDirectory)/**/test/*/TestResults/*/coverage.cobertura.xml" "-targetdir:$(Build.SourcesDirectory)/CodeCoverage" -reportTypes:Cobertura;
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'VSTest'
+        testResultsFiles: '$(Pipeline.Workspace)/project/**/*.trx'
+        mergeTestResults: true
+      displayName: Publish test result
+    - task: PublishCodeCoverageResults@1  
+      displayName: 'Publish code coverage'  
+      inputs:  
+        codeCoverageTool: Cobertura  
+        summaryFileLocation: '$(Build.SourcesDirectory)/CodeCoverage/Cobertura.xml'  
