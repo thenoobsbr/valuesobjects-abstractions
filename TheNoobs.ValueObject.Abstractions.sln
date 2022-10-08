@@ -23,6 +23,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".devops", ".devops", "{7035911C-28A9-416B-B358-8AB28D20666B}"
 	ProjectSection(SolutionItems) = preProject
 		.devops\azuredevops.yml = .devops\azuredevops.yml
+		.devops\variables.yml = .devops\variables.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{A24BA6BA-B250-48E8-BC17-4A1F322C7461}"

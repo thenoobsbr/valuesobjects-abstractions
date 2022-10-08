@@ -1,0 +1,4 @@
+variables:
+  - group: valueobjects-abstractions
+  - group: sonar
+  - group: nuget
