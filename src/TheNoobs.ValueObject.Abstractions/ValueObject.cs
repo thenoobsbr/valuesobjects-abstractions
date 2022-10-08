@@ -3,12 +3,22 @@
 namespace TheNoobs.ValueObject.Abstractions;
 
 /// <summary>
-///     Value object base abstraction class.
+/// Value object base abstraction class.
 /// </summary>
 [Serializable]
 public abstract class ValueObject : IEquatable<ValueObject>
 {
-    /// <inheritdoc cref="IEquatable{T}" />
+    public static bool operator !=(ValueObject left, ValueObject right)
+    {
+        return !Equatable.Equals(left, right);
+    }
+
+    public static bool operator ==(ValueObject left, ValueObject right)
+    {
+        return Equatable.Equals(left, right);
+    }
+
+    /// <inheritdoc cref="IEquatable{T}"/>
     public virtual bool Equals(ValueObject? other)
     {
         if (other is null)
@@ -21,17 +31,7 @@ public abstract class ValueObject : IEquatable<ValueObject>
                 GetAtomicValues().SequenceEqual(other.GetAtomicValues()));
     }
 
-    public static bool operator !=(ValueObject left, ValueObject right)
-    {
-        return !Equatable.Equals(left, right);
-    }
-
-    public static bool operator ==(ValueObject left, ValueObject right)
-    {
-        return Equatable.Equals(left, right);
-    }
-
-    /// <inheritdoc cref="object" />
+    /// <inheritdoc cref="object"/>
     public override bool Equals(object? obj)
     {
         if (obj is null || obj.GetType() != GetType())
@@ -39,10 +39,10 @@ public abstract class ValueObject : IEquatable<ValueObject>
             return false;
         }
 
-        return Equals((ValueObject) obj);
+        return Equals((ValueObject)obj);
     }
 
-    /// <inheritdoc cref="object" />
+    /// <inheritdoc cref="object"/>
     public override int GetHashCode()
     {
         return GetAtomicValues()
@@ -50,21 +50,21 @@ public abstract class ValueObject : IEquatable<ValueObject>
             .Aggregate((x, y) => x ^ y);
     }
 
-    /// <inheritdoc cref="object" />
+    /// <inheritdoc cref="object"/>
     public override string ToString()
     {
         return string.Join(";", GetAtomicValues());
     }
 
     /// <summary>
-    ///     Returns the atomic values used to do comparison with other <see cref="ValueObject" />.
+    /// Returns the atomic values used to do comparison with other <see cref="ValueObject"/>.
     /// </summary>
     /// <returns></returns>
     protected abstract IEnumerable<object> GetAtomicValues();
 }
 
 /// <summary>
-///     Represents a value object that has a single value property.
+/// Represents a value object that has a single value property.
 /// </summary>
 /// <typeparam name="TValue">The value type.</typeparam>
 [Serializable]
@@ -78,7 +78,7 @@ public abstract class ValueObject<TValue> : ValueObject
 
     public TValue Value { get; }
 
-    /// <inheritdoc cref="ValueObject" />
+    /// <inheritdoc cref="ValueObject"/>
     protected override IEnumerable<object> GetAtomicValues()
     {
         yield return Value;
