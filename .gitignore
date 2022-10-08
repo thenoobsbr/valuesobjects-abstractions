@@ -351,3 +351,14 @@ MigrationBackup/
 
 # InteliJ ide
 .idea/
+
+# Sonar Scanner
+.sonarqube/
+
+# Reports Coverage
+[Rr]eports_[Cc]overage/
+
+
+# Tools
+[Tt]ools/
+.[Tt]ools/

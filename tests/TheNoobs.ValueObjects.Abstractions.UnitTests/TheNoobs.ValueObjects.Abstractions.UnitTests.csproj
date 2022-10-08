@@ -10,9 +10,9 @@
     <GenerateFullPaths>true</GenerateFullPaths>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyTitle>TheNoobs.ValueObject.Abstractions.UnitTests</AssemblyTitle>
-    <AssemblyName>TheNoobs.ValueObject.Abstractions.UnitTests</AssemblyName>
-    <RootNamespace>TheNoobs.ValueObject.Abstractions.UnitTests</RootNamespace>
+    <AssemblyTitle>TheNoobs.ValueObjects.Abstractions.UnitTests</AssemblyTitle>
+    <AssemblyName>TheNoobs.ValueObjects.Abstractions.UnitTests</AssemblyName>
+    <RootNamespace>TheNoobs.ValueObjects.Abstractions.UnitTests</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoFixture.Xunit2" Version="4.17.0" />
@@ -34,6 +34,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TheNoobs.ValueObject.Abstractions\TheNoobs.ValueObject.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\TheNoobs.ValueObjects.Abstractions\TheNoobs.ValueObjects.Abstractions.csproj" />
   </ItemGroup>
 </Project>

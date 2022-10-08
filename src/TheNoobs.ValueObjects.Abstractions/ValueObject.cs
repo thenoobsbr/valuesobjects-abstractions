@@ -1,6 +1,6 @@
-﻿using TheNoobs.ValueObject.Abstractions.Internals;
+﻿using TheNoobs.ValueObjects.Abstractions.Internals;
 
-namespace TheNoobs.ValueObject.Abstractions;
+namespace TheNoobs.ValueObjects.Abstractions;
 
 /// <summary>
 /// Value object base abstraction class.
@@ -27,8 +27,8 @@ public abstract class ValueObject : IEquatable<ValueObject>
         }
 
         return ReferenceEquals(this, other) ||
-               (other.GetType() == GetType() &&
-                GetAtomicValues().SequenceEqual(other.GetAtomicValues()));
+               other.GetType() == GetType() &&
+                GetAtomicValues().SequenceEqual(other.GetAtomicValues());
     }
 
     /// <inheritdoc cref="object"/>

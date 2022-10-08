@@ -5,11 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3DAC746D-F6EC-4079-BDFD-26947003883C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheNoobs.ValueObject.Abstractions", "src\TheNoobs.ValueObject.Abstractions\TheNoobs.ValueObject.Abstractions.csproj", "{956A7319-7867-45E2-ADCA-74E4337DE469}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{45A4A648-0289-48CE-868B-640F627919CB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheNoobs.ValueObject.Abstractions.UnitTests", "tests\TheNoobs.ValueObject.Abstractions.UnitTests\TheNoobs.ValueObject.Abstractions.UnitTests.csproj", "{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1AFA010D-C461-4347-A9CB-3155A486589F}"
 	ProjectSection(SolutionItems) = preProject
@@ -31,27 +27,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{A24BA6
 		images\icon.png = images\icon.png
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheNoobs.ValueObjects.Abstractions", "src\TheNoobs.ValueObjects.Abstractions\TheNoobs.ValueObjects.Abstractions.csproj", "{A85F7CDF-4E02-4227-A801-02942EECA8A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheNoobs.ValueObjects.Abstractions.UnitTests", "tests\TheNoobs.ValueObjects.Abstractions.UnitTests\TheNoobs.ValueObjects.Abstractions.UnitTests.csproj", "{A48278C3-59C9-4C54-AA1F-B408730762A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{956A7319-7867-45E2-ADCA-74E4337DE469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{956A7319-7867-45E2-ADCA-74E4337DE469}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{956A7319-7867-45E2-ADCA-74E4337DE469}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{956A7319-7867-45E2-ADCA-74E4337DE469}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A85F7CDF-4E02-4227-A801-02942EECA8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85F7CDF-4E02-4227-A801-02942EECA8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85F7CDF-4E02-4227-A801-02942EECA8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A85F7CDF-4E02-4227-A801-02942EECA8A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48278C3-59C9-4C54-AA1F-B408730762A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48278C3-59C9-4C54-AA1F-B408730762A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48278C3-59C9-4C54-AA1F-B408730762A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48278C3-59C9-4C54-AA1F-B408730762A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{956A7319-7867-45E2-ADCA-74E4337DE469} = {3DAC746D-F6EC-4079-BDFD-26947003883C}
-		{7CD9E22E-6E66-49D9-BB16-FF63CFCCDFD6} = {45A4A648-0289-48CE-868B-640F627919CB}
+		{A85F7CDF-4E02-4227-A801-02942EECA8A4} = {3DAC746D-F6EC-4079-BDFD-26947003883C}
+		{A48278C3-59C9-4C54-AA1F-B408730762A5} = {45A4A648-0289-48CE-868B-640F627919CB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6943B030-537F-446B-A82B-F15DAC1B2927}

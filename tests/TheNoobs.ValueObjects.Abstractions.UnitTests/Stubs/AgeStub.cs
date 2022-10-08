@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace TheNoobs.ValueObject.Abstractions.UnitTests.Stubs;
+namespace TheNoobs.ValueObjects.Abstractions.UnitTests.Stubs;
 
 [ExcludeFromCodeCoverage]
 public class AgeStub : ValueObject<int>

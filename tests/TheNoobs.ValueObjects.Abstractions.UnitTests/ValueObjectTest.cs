@@ -1,9 +1,9 @@
 ﻿using AutoFixture.Xunit2;
 using FluentAssertions;
-using TheNoobs.ValueObject.Abstractions.UnitTests.Stubs;
+using TheNoobs.ValueObjects.Abstractions.UnitTests.Stubs;
 using Xunit;
 
-namespace TheNoobs.ValueObject.Abstractions.UnitTests;
+namespace TheNoobs.ValueObjects.Abstractions.UnitTests;
 
 [Trait("Category", "UnitTests")]
 [Trait("Class", nameof(ValueObject))]

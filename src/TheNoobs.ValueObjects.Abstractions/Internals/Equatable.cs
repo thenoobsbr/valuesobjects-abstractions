@@ -1,4 +1,4 @@
-﻿namespace TheNoobs.ValueObject.Abstractions.Internals;
+﻿namespace TheNoobs.ValueObjects.Abstractions.Internals;
 
 internal static class Equatable
 {
