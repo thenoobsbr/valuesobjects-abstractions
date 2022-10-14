@@ -11,11 +11,7 @@ trigger:
   tags:
     include:
     - '*'
-  branches:
-    include:
-    - release/*
-    - hotfix/*
-
+    
 pr:
   branches:
     include:
@@ -29,7 +25,7 @@ resources:
     endpoint: thenoobsbr
     type: github
     name: TheNoobsBr/Azure-Templates
-    ref: refs/heads/main
+    ref: refs/tags/1.0.0
 
 variables:
 - template: variables.yml
