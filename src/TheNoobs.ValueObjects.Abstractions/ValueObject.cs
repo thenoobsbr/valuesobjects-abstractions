@@ -6,14 +6,14 @@ namespace TheNoobs.ValueObjects.Abstractions;
 /// Value object base abstraction class.
 /// </summary>
 [Serializable]
-public abstract class ValueObject : IEquatable<ValueObject>
+public abstract class ValueObject : IEquatable<ValueObject?>
 {
-    public static bool operator !=(ValueObject left, ValueObject right)
+    public static bool operator !=(ValueObject? left, ValueObject? right)
     {
         return !Equatable.Equals(left, right);
     }
 
-    public static bool operator ==(ValueObject left, ValueObject right)
+    public static bool operator ==(ValueObject? left, ValueObject? right)
     {
         return Equatable.Equals(left, right);
     }

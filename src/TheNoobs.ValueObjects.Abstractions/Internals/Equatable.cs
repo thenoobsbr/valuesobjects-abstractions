@@ -2,7 +2,7 @@
 
 internal static class Equatable
 {
-    internal static bool Equals<TLeft, TRight>(TLeft left, TRight right)
+    internal static bool Equals<TLeft, TRight>(TLeft? left, TRight? right)
         where TLeft : class, IEquatable<TRight>
         where TRight : class
     {
