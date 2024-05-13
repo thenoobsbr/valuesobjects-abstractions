@@ -27,7 +27,7 @@ public abstract class ValueObject : IEquatable<ValueObject?>
         }
 
         return ReferenceEquals(this, other) ||
-               GetType().IsInstanceOfType(other) &&
+               (GetType().IsInstanceOfType(other) || GetType().IsAssignableTo(other.GetType())) &&
                GetAtomicValues().SequenceEqual(other.GetAtomicValues());
     }
 

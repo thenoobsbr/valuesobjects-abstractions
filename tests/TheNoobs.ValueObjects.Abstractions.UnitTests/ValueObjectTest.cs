@@ -157,5 +157,6 @@ public class ValueObjectTest
         AgeStubProxy age2 = new AgeStubProxy(1);
         
         (age1 == age2).Should().BeTrue();
+        (age2 == age1).Should().BeTrue();
     }
 }
