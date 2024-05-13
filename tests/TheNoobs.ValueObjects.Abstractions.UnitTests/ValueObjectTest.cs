@@ -149,4 +149,14 @@ public class ValueObjectTest
         ZipCodeStub? zipCode2 = null;
         (zipCode1! == zipCode2!).Should().BeTrue();
     }
+
+    [Fact]
+    public void Given_AValueObject_WhenComparesToAProxiedItself_Then_TheResultShouldBeTrue()
+    {
+        AgeStub age1 = new AgeStub(1);
+        AgeStubProxy age2 = new AgeStubProxy(1);
+        
+        (age1 == age2).Should().BeTrue();
+        (age2 == age1).Should().BeTrue();
+    }
 }
